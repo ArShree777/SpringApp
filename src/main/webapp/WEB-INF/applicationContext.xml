@@ -10,12 +10,20 @@
         <property name="username" value="root"/>
         <property name="password" value=""/>
     </bean>  
-     
-    <bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   <!--for amazon server database-->  
+<!--    <bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
         <property name="url" value="jdbc:postgresql://ec2-184-72-239-186.compute-1.amazonaws.com/d2nvve9hmjas0d?sslmode=require"/>
         <property name="username" value="tjwcbkhztzzlkp"/>
         <property name="password" value="ffea1f84c43e630d66dc3aa8ab8a05905136c1668b60715e45ad21b36b84774e"/>
+    </bean>  -->
+    
+    
+        <bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost/SpringApp"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="theProgrammer"/>
     </bean>  
     
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
